@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-green-200">
+    <div class="container mx-auto p-4">
+        <h2 class="text-3xl text-center mb-6 font-semibold">Tax Calculator (Monthly)</h2>
+        <div class="flex flex-wrap justify-around">
+            <div class="w-full sm:w-5/12 mb-6 p-6 shadow-lg rounded-lg bg-white" style="border: 5px solid black;">
+                <h3 class="text-lg mb-4 font-semibold">Calculate:</h3>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="salary">Gross Pay</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="salary" type="number" placeholder="Enter gross pay">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="deductions">Other Tax Allowable Deductions</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="deductions" type="number" placeholder="Enter deductions">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="pension">Pension Contributions</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="pension" type="number" placeholder="Enter pension contributions">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="insurance">Other Insurance Contributions</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="insurance" type="number" placeholder="Enter other insurance contributions">
+                </div>
+                <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" id="calculate">Calculate</button>
+            </div>
+            <div class="w-full sm:w-5/12 mb-6 p-6 shadow-lg rounded-lg bg-white" style="border: 5px solid black;">
+                <h3 class="text-lg font-semibold mb-4" >Results:</h3>
+                <p class="mb-4">Gross Pay / Salary: <span id="result-gross-pay"></span></p>
+                <p class="mb-4">PAYE Payable: <span id="result-paye-payable"></span></p>
+                <p class="mb-4">NSSF Contribution: <span id="result-nssf"></span></p>
+                <p class="mb-4">Housing Levy: <span id="result-housing-levy"></span></p>
+                <p class="mb-4">NHIF Contribution: <span id="result-nhif"></span></p>
+                <p class="mb-4">Other Insurance Contributions: <span id="result-insurance"></span></p>
+                <p class="mb-4">Total Deductions: <span id="result-total-deductions"></span></p>
+                <p class="mb-4">Net Pay: <span id="result-net-pay"></span></p>
+            </div>
+            <div class="w-full sm:w-5/12 mb-6 p-6 shadow-lg rounded-lg bg-white" style="border: 5px solid black;">
+                <h3 class="text-lg font-semibold mb-4">PAYE Information:</h3>
+                <p class="mb-4">Gross Pay / Salary: <span id="paye-gross-pay"></span></p>
+                <p class="mb-4">Allowable Deductions: <span id="paye-allowable-deductions"></span></p>
+                <p class="mb-4">Taxable Pay: <span id="paye-taxable-pay"></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto p-4 mt-8">
+        <div class="flex flex-wrap justify-around bg-white p-6 rounded-lg shadow-lg" style="border: 5px solid black;">
+            <div class="w-full md:w-1/4 mb-6 text-center">
+                <img src="https://sealconnectedventures.com/wp-content/uploads/2023/08/Greenlogoblackbcgwithslogan2.jpg" alt="Company Logo" class="mx-auto mb-4" style="max-width:100px;">
+            </div>
+            <div class="w-full md:w-1/4 mb-6 text-center">
+                <h4 class="font-semibold mb-2">Phone Numbers</h4>
+                <p><a href="tel:+254791292246" class="text-blue-600 hover:underline">+254791292246</a></p>
+                <p><a href="tel:+254713281299" class="text-blue-600 hover:underline">+254713281299</a></p>
+            </div>
+            <div class="w-full md:w-1/4 mb-6 text-center">
+                <h4 class="font-semibold mb-2">Email</h4>
+                <p><a href="mailto:hello@sealconnectedventures.com" class="text-blue-600 hover:underline">hello@sealconnectedventures.com</a></p>
+            </div>
+            <div class="w-full md:w-1/4 text-center">
+                <h4 class="font-semibold mb-2">Location</h4>
+                <p>Woodvale Place, 1st floor,</p>
+                <p>Along Woodvale Grove Rd,</p>
+                <p>Westlands, Nairobi</p>
+            </div>
+        </div>
+    </div>    
+    <script src="taxcalculator.js"></script>
+</body>
+</html>
